@@ -294,14 +294,15 @@ diaNames = []
 retry = False
 i = 0
 changes ={}
+sirocco = None
 while retry or i ==0:
     i+=1
     while True:
         runNo = get_int('What run no?')
         events = get_int('How many Events?')
-        if i == 0:
+        if i == 0 or sirocco ==None:
             sirocco = -1 
-            while not sirocco in [0,1]
+            while not sirocco in [0,1]:
                 sirocco = get_int('Which sirocco?')
                 if sirocco in [4,5]:
                     sirocco -= 4
